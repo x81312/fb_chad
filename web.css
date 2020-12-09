@@ -47,7 +47,7 @@ table {
 display: none; /* Hidden by default */
 position: fixed; /* Fixed/sticky position */
 bottom: 60px; /* Place the button at the bottom of the page */
-right: 600px; /* Place the button 30px from the right */
+right: 650px; /* Place the button 30px from the right */
 z-index: 99; /* Make sure it does not overlap */
 border: none; /* Remove borders */
 outline: none; /* Remove outline */
@@ -59,7 +59,6 @@ border-radius: 10px; /* Rounded corners */
 font-size: 18px; /* Increase font size */
 font-family:  PingFang TC;
 }
-
 #myBtn:hover {
 background-color: #555; /* Add a dark-grey background on hover */
 }
@@ -67,12 +66,10 @@ background-color: #555; /* Add a dark-grey background on hover */
 height: 8421px;
 background: #edfbff 0% 0% no-repeat padding-box;
 opacity: 1;
-width: 100%;
+width: 1920px;
 }
 .navbar-area {
-top: 0px;
-left: 0px;
-width: 100%;
+width: 1920px;
 height: 84px;
 
 background: #ffffff 0% 0% no-repeat padding-box;
@@ -543,7 +540,7 @@ top: 7545px;
 
 footer{
 top: 8334px;
-width: 100%;
+width: 1920px;
 height: 87px;
 background: transparent linear-gradient(90deg, #00829B 0%, #009583 100%) 0% 0% no-repeat padding-box;
 opacity: 1;
