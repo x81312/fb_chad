@@ -11,6 +11,50 @@
       crossorigin="anonymous"
     />
     <style>
+      /* css reset */
+      html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+    /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
         #myBtn {
         display: none; /* Hidden by default */
         position: fixed; /* Fixed/sticky position */
@@ -34,7 +78,7 @@
             font-family: PingFang TC;
             height: 9409px;
         }
-        .header{
+        header{
             width: 414px;
             height: 82.7px;
             position: relative;
@@ -135,216 +179,137 @@
           height: 200px;
           background-color: blue;
       }
-
-      /* 步驟1 */
-      .step1icon{
-        
-        height: 0;
+      /* 步驟 */
+      .step-icon{
         border-style: solid;
         border-width: 4.31px 0 4.31px 10px;
         border-color: transparent transparent transparent #F55A08;
-        position: absolute;
-        top:147px;
         left: 16px;
+        position: absolute;
+        
+      }
+      .step-text{
+        text-align: left;
+        font-size: 18px;
+        color: #505050;
+        position: absolute;
+        line-height: 25px;
+      }
+      .step-img{
+          left: 55px;
+          position: absolute;
+          box-shadow: 0px 3px 6px #00000029;
+      }
+      .step-next-below{
+        border: 1px dashed #EDEDED;
+        opacity: 1;
+        width: 414px;
+        position: absolute;
+      }
+      /* 步驟1 */
+      .step1icon{
+        top:147px;
       }
       .step1-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
           top:138.7px;
           left: 39px;
           width: 346.38px;
           height: 116.3px;
-          position: absolute;
-          line-height: 25px;
       }
       .step1-img{
           width: 305px;
           height: 542.22px;
           top:219px;
-          left: 55px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       .step1-1-img{
           width: 305px;
           height: 542.22px;
-          top: 782px;;
-          left: 55px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
+          top: 782px;     
       }
-      .next-below1{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
-        top: 1356.5px;
-        position: absolute;
+      .next-below1{ 
+        top: 1356.5px
       }
      
     /* 步驟2 */
     .step2icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
         top:1383px;
-        left: 16px;
       }
-      .step2-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step2-text{  
           top:1373.7px;
           left: 39px;
           width: 346.38px;
           height: 116.3px;
-          position: absolute;
-          line-height: 25px;
       }
       .step2-img{
           width: 305px;
           height: 542.22px;
           top:1502px;
-          left: 55px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below2{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 2077.5px;
-        position: absolute;
       }
       /* 步驟3 */
-    .step3icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+    .step3icon{     
         top:2098px;
-        left: 16px;
       }
       .step3-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
           top:2089.7px;
           left: 37px;
           width: 339.26px;
           height: 79.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step3-img{
           width: 305px;
           height: 542.22px;
           top:2192px;
-          left: 55px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below3{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 2767.5px;
-        position: absolute;
       }  
 
       /* 步驟4 */
       .step4icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
-        top:2794px;
-        left: 16px;
+        top:2794px;    
       }
-      .step4-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step4-text{     
           top:2784.7px;
           left: 42px;
           width: 346.38px;
           height: 116.3px;
-          position: absolute;
-          line-height: 25px;
       }
       .step4-img{
           width: 305.28px;
           height: 543px;
           top:2878px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below4{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 3459.5px;
-        position: absolute;
       }
      /* 步驟5 */
-     .step5icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+     .step5icon{      
         top:3486px;
-        left: 16px;
       }
-      .step5-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step5-text{   
           top:3476.7px;
           left: 42px;
           width: 346.38px;
           height: 116.3px;
-          position: absolute;
-          line-height: 25px;
       }
       .step5-img{
           width: 305.28px;
           height: 543px;
           top:3545px;
-          left: 55px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below5{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 4126.5px;
-        position: absolute;
       }
     /* 步驟6 */
-    .step6icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+    .step6icon{       
         top:4155px;
-        left: 16px;
       }
     .step6icon-1{
         width: 37px;
@@ -373,260 +338,135 @@
         top:4226px;
         position: absolute;
     }      
-      .step6-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step6-text{   
           top:4148px;
           left: 29px;
           width: 346.26px;
           height: 125.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step6-img{
           width: 305.28px;
           height: 543px;
           top:4286px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below6{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 4867.5px;
-        position: absolute;
       }
       /* 步驟7 */
-     .step7icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+     .step7icon{     
         top:4896px;
-        left: 16px;
       }
-      .step7-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step7-text{     
           top:4889px;
           left: 29px;
           width: 346.26px;
           height: 75.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step7-img{
           width: 305.28px;
           height: 542.99px;
           top:4986px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below7{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 5567.5px;
-        position: absolute;
       }
        /* 步驟8 */
-     .step8icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+     .step8icon{  
         top:5596px;
-        left: 16px;
       }
-      .step8-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step8-text{        
           top:5589px;
           left: 29px;
           width: 346.26px;
-          height: 75.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step8-img{
           width: 305.28px;
           height: 543px;
           top:5686px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below8{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 6267.5px;
-        position: absolute;
       }
       /* 步驟9 */
       .step9icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
         top:6296px;
-        left: 16px;
       }
-      .step9-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step9-text{     
           top:6289px;
           left: 29px;
           width: 346.26px;
           height: 125.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step9-img{
           width: 305.28px;
           height: 543px;
           top:6436px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below9{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 7017.5px;
-        position: absolute;
       }
     /* 步驟10 */
-    .step10icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+    .step10icon{ 
         top:7046px;
-        left: 16px;
       }
-      .step10-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step10-text{       
           top:7039px;
           left: 29px;
           width: 346.26px;
           height: 150.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step10-img{
           width: 305.28px;
           height: 543px;
           top:7211px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below10{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 7792.5px;
-        position: absolute;
       }                                                                                                           
     /* 步驟11 */
-    .step11icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
-        top:7821px;
-        left: 16px;
+    .step11icon{    
+        top:7821px
       }
-      .step11-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step11-text{    
           top:7814px;
           left: 29px;
           width: 346.26px;
           height: 75.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step11-img{
           width: 305.28px;
           height: 543px;
           top:7911px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
       }
       
       .next-below11{
-        height: 0px;
-        border: 1px dashed #EDEDED;
-        opacity: 1;
-        width: 414px;
         top: 8492.5px;
-        position: absolute;
       }
     /* 步驟12 */
-    .step12icon{
-        height: 0;
-        border-style: solid;
-        border-width: 4.31px 0 4.31px 10px;
-        border-color: transparent transparent transparent #F55A08;
-        position: absolute;
+    .step12icon{  
         top:8521px;
-        left: 16px;
       }
-      .step12-text{
-          text-align: left;
-          font-size: 18px;
-          color: #505050;
+      .step12-text{     
           top:8514px;
           left: 29px;
           width: 346.26px;
           height: 129.69px;
-          position: absolute;
-          line-height: 25px;
       }
       .step12-img{
           width: 305.28px;
           height: 543px;
           top:8665px;
-          left: 54px;
-          position: absolute;
-          box-shadow: 0px 3px 6px #00000029;
-      }
-      
-                                                                                                                                      
+      }                                                                                                                               
     </style>
 </head>
 <body>
   
-    <div class="header">
+    <header>
         <div class="header-top d-flex  align-items-center">
             <div class="icon-area d-flex">
                         <div class="circle"></div>
@@ -642,107 +482,107 @@
             
        
         <div class="header-top-area"></div>
-        <img src="images/fb_logo.svg" class="logo"></img>
-        <img src="./images/btn_home.svg" class="home"></img>
+        <img src="images/fb_logo.svg" class="logo" alt="LOGO"></img>
+        <img src="./images/btn_home.svg" class="home" alt="HOME"></img>
         
-    </div>
+      </header>
     <div class="next-below"></div>  
         <div class="title-icon"></div>
         <div class="title">多張保單地址/電話/E-mail變更</div>
         <!-- 步驟1 -->
-        <div class="step1icon"></div>
-        <div class="step1-text">
+        <div class="step1icon step-icon"></div>
+        <div class="step1-text step-text">
             <span style="color:#F55A08;">步驟 1：</span><br>由【手機e方便】，點選『保戶會員專區』登入。
         </div>
-       <img src="./images/instructions/mobile/mobile01.png" class="step1-img"></img>
-       <img src="./images/instructions/mobile/mobile02.png" class="step1-1-img"></img>
-       <div class="next-below1"></div>
+       <img src="./images/instructions/mobile/mobile01.png" class="step1-img step-img"></img>
+       <img src="./images/instructions/mobile/mobile02.png" class="step1-1-img step-img"></img>
+       <div class="next-below1 step-next-below"></div>
         <!-- 步驟2 -->
-        <div class="step2icon"></div>
-        <div class="step2-text">
+        <div class="step2icon step-icon"></div>
+        <div class="step2-text step-text">
             <span style="color:#F55A08 ;">步驟 2：</span><br>點選『線上交易』<br>★保戶需先申請成為交易會員方可於網路<br>辦理變更。
         </div>
-       <img src="./images/instructions/mobile/mobile03.png" class="step2-img"></img>
-       <div class="next-below2"></div>
+       <img src="./images/instructions/mobile/mobile03.png" class="step2-img step-img"></img>
+       <div class="next-below2 step-next-below"></div>
         <!-- 步驟3 -->
-        <div class="step3icon"></div>
-        <div class="step3-text">
+        <div class="step3icon step-icon"></div>
+        <div class="step3-text step-text">
             <span style="color:#F55A08 ;">步驟 3：</span><br>點選後進入『多張保單地址/電話/E-mail<br>變更』作業。
         </div>
-       <img src="./images/instructions/mobile/mobile04.png" class="step3-img"></img>
-       <div class="next-below3"></div>
+       <img src="./images/instructions/mobile/mobile04.png" class="step3-img step-img"></img>
+       <div class="next-below3 step-next-below"></div>
         <!-- 步驟4 -->
-        <div class="step4icon"></div>
-        <div class="step4-text">
+        <div class="step4icon step-icon"></div>
+        <div class="step4-text step-text">
             <span style="color:#F55A08 ;">步驟 4：</span><br>確認顯示的行動電話及電子信箱是否為最新資料，若需修改請點選<img src="./images/edit_btn.svg" style="height: 22.15px;width: 22.68px;"></img>修改。
         </div>
-       <img src="./images/instructions/mobile/mobile05.png" class="step4-img"></img>
-       <div class="next-below4"></div>
+       <img src="./images/instructions/mobile/mobile05.png" class="step4-img step-img"></img>
+       <div class="next-below4 step-next-below"></div>
        <!-- 步驟5 -->
-       <div class="step5icon"></div>
-       <div class="step5-text">
+       <div class="step5icon step-icon"></div>
+       <div class="step5-text step-text">
            <span style="color:#F55A08 ;">步驟 5：</span><br>請點選<img src="./images/edit_btn.svg" style="height: 22.15px;width: 22.68px;"></img>即可輸入欲變更之內容。
        </div>
-      <img src="./images/instructions/mobile/mobile06.png" class="step5-img"></img>
-      <div class="next-below5"></div>
+      <img src="./images/instructions/mobile/mobile06.png" class="step5-img step-img" ></img>
+      <div class="next-below5 step-next-below"></div>
        <!-- 步驟6 -->
-       <div class="step6icon"></div>
+       <div class="step6icon step-icon"></div>
        <div class="step6icon-1"></div>
        <div class="step6icon-2"></div>
        <div class="step6icon-3"></div>
-       <div class="step6-text">
+       <div class="step6-text step-text">
            <span style="color:#F55A08 ;">步驟 6：</span>
            <br><span class="text-white">1、</span>請確認變更內容是否正確 
            <br><span class="text-white">2、</span>若欲放棄申請，可點選<img src="./images/delete_btn.svg" style="height: 22.15px;width: 22.96px;"></img> 
            <br><span class="text-white">3、</span>若欲修改該項變更輸入內容，可點選<img src="./images/edit_btn.svg" style="height: 22.15px;width: 22.68px;"></img>
        </div>
-      <img src="./images/instructions/mobile/mobile07.png" class="step6-img"></img>
-      <div class="next-below6"></div>
+      <img src="./images/instructions/mobile/mobile07.png" class="step6-img step-img"></img>
+      <div class="next-below6 step-next-below"></div>
       <!-- 步驟7 -->
-      <div class="step7icon"></div>
-      <div class="step7-text">
+      <div class="step7icon step-icon"></div>
+      <div class="step7-text step-text">
           <span style="color:#F55A08 ;">步驟 7：</span><br>請審閱重要提醒，確認無誤後請勾選□我已了解並同意後，點選確認進入下一步。
       </div>
-     <img src="./images/instructions/mobile/mobile08.png" class="step7-img"></img>
-     <div class="next-below7"></div>
+     <img src="./images/instructions/mobile/mobile08.png" class="step7-img step-img"></img>
+     <div class="next-below7 step-next-below"></div>
       <!-- 步驟8 -->
-      <div class="step8icon"></div>
-      <div class="step8-text">
+      <div class="step8icon step-icon"></div>
+      <div class="step8-text step-text">
           <span style="color:#F55A08 ;">步驟 8：</span><br>請確認本次辦理變更資料，是否傳送至其他保險公司申辦相同變更項目。
       </div>
-     <img src="./images/instructions/mobile/mobile09.png" class="step8-img"></img>
-     <div class="next-below8"></div>
+     <img src="./images/instructions/mobile/mobile09.png" class="step8-img step-img"></img>
+     <div class="next-below8 step-next-below"></div>
       <!-- 步驟9 -->
-      <div class="step9icon"></div>
-      <div class="step9-text">
+      <div class="step9icon step-icon"></div>
+      <div class="step9-text step-text">
           <span style="color:#F55A08 ;">步驟 9：</span>
           <br>如同意傳送至其他保險公司，請選擇欲傳送<br>之保險公司(可複選)。
           <br>★僅提供有加入試辦之保險公司，請勾選有<br>該公司保單之保險公司。
       </div>
-     <img src="./images/instructions/mobile/mobile10.png" class="step9-img"></img>
-     <div class="next-below9"></div>
+     <img src="./images/instructions/mobile/mobile10.png" class="step9-img step-img"></img>
+     <div class="next-below9 step-next-below"></div>
       <!-- 步驟10 -->
-      <div class="step10icon"></div>
-      <div class="step10-text">
+      <div class="step10icon step-icon"></div>
+      <div class="step10-text step-text">
           <span style="color:#F55A08 ;">步驟 10：</span><br>請審閱保全申請轉送暨個人資料告知事項，
           <br>審閱完成後，請點選□本人已審閱蒐集、處<br>理及利用個人資料告知事項，如取消轉送，
           <br>請點選『不同意傳送』，可回至確認是否同<br>意轉送頁重新選擇。
       </div>
-     <img src="./images/instructions/mobile/mobile11.png" class="step10-img"></img>
-     <div class="next-below10"></div>
+     <img src="./images/instructions/mobile/mobile11.png" class="step10-img step-img"></img>
+     <div class="next-below10 step-next-below"></div>
       <!-- 步驟11 -->
-      <div class="step11icon"></div>
-      <div class="step11-text">
+      <div class="step11icon step-icon"></div>
+      <div class="step11-text step-text">
           <span style="color:#F55A08 ;">步驟 11：</span><br>輸入動態密碼，未收到動態密碼，可點選重新發送動態密碼。
       </div>
-     <img src="./images/instructions/mobile/mobile12.png" class="step11-img"></img>
-     <div class="next-below11"></div>
+     <img src="./images/instructions/mobile/mobile12.png" class="step11-img step-img"></img>
+     <div class="next-below11 step-next-below"></div>
       <!-- 步驟12 -->
-      <div class="step12icon"></div>
-      <div class="step12-text">
+      <div class="step12icon step-icon"></div>
+      <div class="step12-text step-text">
           <span style="color:#F55A08 ;">步驟 12：</span><br>委託受理完成<br>可點選『列印內容』，產出加密之PDF檔，<br>密碼為要保人身分證字號，第一個英文字母<br>大寫。
       </div>
-     <img src="./images/instructions/mobile/mobile13.png" class="step12-img"></img>
+     <img src="./images/instructions/mobile/mobile13.png" class="step12-img step-img"></img>
      <button onclick="topFunction()" id="myBtn" title="Go to top">GO TOP</button>
     
      <script>
