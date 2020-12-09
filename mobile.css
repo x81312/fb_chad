@@ -59,10 +59,7 @@ font-size: 18px; /* Increase font size */
 font-family:  PingFang TC;
 }
 
-/* #myBtn:hover {
-background-color: #555; 
-} */
-body{
+main{
     font-family: PingFang TC;
     height: 9409px;
 }
@@ -450,4 +447,3 @@ top:8521px;
   height: 543px;
   top:8665px;
 }                                                               
-}
