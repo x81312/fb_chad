@@ -12,7 +12,50 @@
     />
   
     <style>
-     
+     /* css reset */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+    /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
       #myBtn {
         display: none; /* Hidden by default */
         position: fixed; /* Fixed/sticky position */
@@ -33,17 +76,14 @@
         background-color: #555; /* Add a dark-grey background on hover */
       }
       .bg {
-        top: 0px;
-        left: 0px;
         height: 8421px;
         background: #edfbff 0% 0% no-repeat padding-box;
         opacity: 1;
-        position: relative;
       }
       .navbar-area {
         top: 0px;
         left: 0px;
-        width: 1920px;
+        width: 100%;
         height: 84px;
         background: #ffffff 0% 0% no-repeat padding-box;
         box-shadow: 0px 2px 6px #0000000a;
@@ -130,22 +170,15 @@
         opacity: 1;
         position: absolute;
       }
-      /* 步驟1 */
-      .step1-icon {
-        width: 0;
-        height: 0;
+      /* 步驟 */
+    
+      .step-icon{
         border-style: solid;
         border-width: 7.5px 0 7.5px 12.93px;
         border-color: transparent transparent transparent#f55a08;
-        top: 165px;
-        left: 375px;
         position: absolute;
       }
-      .step1 {
-        top: 159px;
-        left: 405px;
-        width: 69px;
-        height: 25px;
+      .step{
         font: var(--unnamed-font-style-normal) normal
           var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
           var(--unnamed-font-family-pingfang-tc);
@@ -156,240 +189,13 @@
         color: #f55a08;
         opacity: 1;
         position: absolute;
-      }
-      .step1-text {
-        top: 193px;
-        left: 405px;
-        width: 293px;
-        height: 50px;
-        font: var(--unnamed-font-style-normal) normal
-          var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
-          var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
-      }
-      .step1-img {
-        top: 159px;
-        left: 713px;
-        width: 810px;
-        height: 456px;
-        background: transparent url("./images/instructions/web/web01.png") 0% 0%
-          no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
-      }
-      .step1-img-2 {
-        top: 631px;
-        left: 713px;
-        width: 810px;
-        height: 456px;
-        background: transparent url("./images/instructions/web/web02.png") 0% 0%
-          no-repeat padding-box;
-        background-size: cover;
-        box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-        position: absolute;
-      }
-      /* 步驟2 */
-      .step2-icon {
-        top: 1144px;
-        left: 375px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
-      }
-      .step2 {
-        top: 1139px;
-        left: 402px;
-        width: 72px;
+        width: 80px;
         height: 25px;
+      }
+      .step-text{
         font: var(--unnamed-font-style-normal) normal
           var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
           var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #f55a08;
-        opacity: 1;
-        position: absolute;
-      }
-      .step2-text {
-        top: 1170px;
-        left: 404px;
-        width: 294px;
-        height: 145px;
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        font: normal normal normal 18px/25px PingFang TC;
-        text-align: left;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
-      }
-      .step2-img {
-        top: 1139px;
-        left: 713px;
-        width: 810px;
-        height: 788px;
-        background: transparent url("./images/instructions/web/web03.png") 0% 0%
-          no-repeat padding-box;
-        background-size: cover;
-        box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-        position: absolute;
-      }
-      /* 步驟3 */
-      .step3-icon {
-        top: 1984px;
-        left: 375px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
-      }
-      .step3 {
-        top: 1979px;
-        left: 402px;
-        width: 72px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal
-          var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
-          var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #f55a08;
-        opacity: 1;
-        position: absolute;
-      }
-      .step3-text {
-        top: 2010px;
-        left: 398px;
-        width: 300px;
-        height: 50px;
-        font: var(--unnamed-font-style-normal) normal
-          var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
-          var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
-      }
-      .step3-img {
-        top: 1979px;
-        left: 713px;
-        width: 810px;
-        height: 456px;
-        background: transparent url("./images/instructions/web/web04.png") 0% 0%
-          no-repeat padding-box;
-        background-size: cover;
-        box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-        position: absolute;
-      }
-      /* 步驟4 */
-      .step4-icon {
-        top: 2492px;
-        left: 375px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
-      }
-      .step4 {
-        top: 2487px;
-        left: 402px;
-        width: 72px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal
-          var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
-          var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #f55a08;
-        opacity: 1;
-        position: absolute;
-      }
-      .step4-text {
-        top: 2515px;
-        left: 405px;
-        width: 293px;
-        height: 75px;
-        font: var(--unnamed-font-style-normal) normal
-          var(--unnamed-font-weight-normal) var(--unnamed-font-size-18) / 25px
-          var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
-      }
-      .step4-img {
-        top: 2487px;
-        left: 713px;
-        width: 810px;
-        height: 456px;
-        background: transparent url("./images/instructions/web/web05.png") 0% 0%
-          no-repeat padding-box;
-        background-size: cover;
-        box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-        position: absolute;
-      }
-      /* 步驟5 */
-      .step5-icon {
-        top: 3000px;
-        left: 375px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
-      }
-      .step5 {
-        top: 2995px;
-        left: 402px;
-        width: 72px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
-      }
-      .step5-text {
-        top: 3022px;
-        left: 405px;
-        width: 280px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-helvetica);
         letter-spacing: var(--unnamed-character-spacing-0-36);
         text-align: left;
         font: normal normal normal 18px/30px PingFang TC;
@@ -398,40 +204,141 @@
         opacity: 1;
         position: absolute;
       }
+      .step-img{
+        box-shadow: 0px 3px 6px #00000029;
+        background-size: cover;
+        opacity: 1;
+        width: 810px;
+        position: absolute;
+      }
+      /* 步驟1 */
+      .step1-icon {
+        top: 165px;
+        left: 375px;
+      }
+      .step1 {
+        top: 159px;
+        left: 405px;
+      }
+      .step1-text {
+        top: 193px;
+        left: 405px;
+        width: 293px;
+        height: 50px;
+      }
+      .step1-img-1 {
+        top: 159px;
+        left: 713px;
+        height: 456px;
+        background: transparent url("./images/instructions/web/web01.png") 0% 0%
+          no-repeat padding-box;
+        background-size: cover;
+      }
+      .step1-img-2 {
+        top: 631px;
+        left: 713px;
+        height: 456px;
+        background: transparent url("./images/instructions/web/web02.png") 0% 0%
+          no-repeat padding-box;
+          background-size: cover;
+      }
+      /* 步驟2 */
+      .step2-icon {
+        top: 1144px;
+        left: 375px;
+      }
+      .step2 {
+        top: 1139px;
+        left: 402px;
+      }
+      .step2-text {
+        top: 1170px;
+        left: 404px;
+        width: 294px;
+        height: 145px;
+      }
+      .step2-img {
+        top: 1139px;
+        left: 713px;
+        height: 788px;
+        background: transparent url("./images/instructions/web/web03.png") 0% 0%
+          no-repeat padding-box;
+        background-size: cover;
+      }
+      /* 步驟3 */
+      .step3-icon {
+        top: 1984px;
+        left: 375px;
+      }
+      .step3 {
+        top: 1979px;
+        left: 402px;
+      }
+      .step3-text {
+        top: 2010px;
+        left: 398px;
+        width: 300px;
+        height: 50px;
+      }
+      .step3-img {
+        top: 1979px;
+        left: 713px;
+        height: 456px;
+        background: transparent url("./images/instructions/web/web04.png") 0% 0%
+          no-repeat padding-box;
+      }
+      /* 步驟4 */
+      .step4-icon {
+        top: 2492px;
+        left: 375px;
+      }
+      .step4 {
+        top: 2487px;
+        left: 402px;
+      }
+      .step4-text {
+        top: 2515px;
+        left: 405px;
+        width: 293px;
+        height: 75px;
+      }
+      .step4-img {
+        top: 2487px;
+        left: 713px;
+        height: 456px;
+        background: transparent url("./images/instructions/web/web05.png") 0% 0%
+          no-repeat padding-box;
+      }
+      /* 步驟5 */
+      .step5-icon {
+        top: 3000px;
+        left: 375px;
+      }
+      .step5 {
+        top: 2995px;
+        left: 402px;
+      }
+      .step5-text {
+        top: 3022px;
+        left: 405px;
+        width: 280px;
+        height: 25px;
+      }
       .step5-img {
         top: 2995px;
         left: 708px;
-        width: 810px;
+       
         height: 753px;
         background: transparent url('./images/instructions/web/web06.png') 0% 0% no-repeat padding-box;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
       }
       /* 步驟6 */
       .step6-icon {
         top: 3806px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step6 {
         top: 3801px;
         left: 402px;
-        width: 72px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step6-1-icon{
         top: 3832px;
@@ -468,441 +375,191 @@
         left: 382px;
         width: 288px;
         height: 115px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        opacity: 1;
-        position: absolute;
       }
       .step6-img {
         top: 3800px;
         left: 713px;
-        width: 810px;
         height: 679px;
         background: transparent url('./images/instructions/web/web07.png') 0% 0% no-repeat padding-box;
-        background-size: cover;
-        box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-        position: absolute;
       }
       /* 步驟7 */
       .step7-icon {
         top: 4535px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step7 {
         top: 4530px;
         left: 409px;
-        width: 80px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step7-text {
         top: 4555px;
         left: 394px;
         width: 304px;
         height: 85px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-helvetica);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
       }
       .step7-img {
         top: 4530px;
-        left: 713px;
-        width: 810px;
+        left: 713px;  
         height: 623px;
         background: transparent url('./images/instructions/web/web08.png') 0% 0% no-repeat padding-box;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
       }
       /* 步驟8 */
       .step8-icon {
         top: 5209px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step8{
         top: 5204px;
         left: 408px;
-        width: 70px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step8-text {
         top: 5232px;
         left: 400px;
         width: 298px;
         height: 101px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
       }
       .step8-img {
         top: 5204px;
-        left: 713px;
-        width: 810px;
+        left: 713px; 
         height: 452px;
         background: transparent url('./images/instructions/web/web09.png') 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
       }
       /* 步驟9 */
       .step9-icon {
         top: 5712px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step9{
         top: 5707px;
         left: 402px;
-        width: 72px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step9-text {
         top: 5741px;
         left: 400px;
         width: 293px;
         height: 115px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
       }
       .step9-img {
         top: 5707px;
         left: 713px;
-        width: 810px;
         height: 673px;
         background: transparent url('./images/instructions/web/web10.png') 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        opacity: 1;
-        background-size: cover;
-        position: absolute;
       }
       /* 步驟10 */
       .step10-icon {
         top: 6435px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step10{
         top: 6430px;
         left: 394px;
-        width: 80px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step10-text {
         top: 6455px;
         left: 400px;
         width: 293px;
         height: 175px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
       }
       .step10-img {
         top: 6431px;
         left: 713px;
-        width: 810px;
         height: 451px;
         background: transparent url('./images/instructions/web/web11.png') 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
       }
       /* 步驟11 */
       .step11-icon {
         top: 6937px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step11{
         top: 6933px;
         left: 398px;
-        width: 78px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step11-text {
         top: 6960px;
         left: 395px;
         width: 293px;
         height: 55px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
       }
       .step11-img {
         top: 6933px;
         left: 713px;
-        width: 810px;
         height: 581px;
         background: transparent url('./images/instructions/web/web12.png') 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
       }
       /* 步驟12 */
       .step12-icon {
         top: 7570px;
         left: 369px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.5px 0 7.5px 12.93px;
-        border-color: transparent transparent transparent#f55a08;
-        position: absolute;
       }
       .step12{
         top: 7565px;
         left: 401px;
-        width: 78px;
-        height: 25px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/25px var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/25px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #F55A08;
-        opacity: 1;
-        position: absolute;
       }
       .step12-text {
         top: 7590px;
         left: 395px;
         width: 293px;
         height: 115px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-pingfang-tc);
-        letter-spacing: var(--unnamed-character-spacing-0-36);
-        text-align: left;
-        font: normal normal normal 18px/30px PingFang TC;
-        letter-spacing: 0.36px;
-        color: #505050;
-        opacity: 1;
-        position: absolute;
       }
       .step12-img {
         top: 7565px;
         left: 713px;
-        width: 810px;
         height: 668px;
         background: transparent url('./images/instructions/web/web13.png') 0% 0% no-repeat padding-box;
-        box-shadow: 0px 3px 6px #00000029;
-        background-size: cover;
-        opacity: 1;
-        position: absolute;
       }
-      .next-below {
-        top: 1118px;
-        left: 360px;
+      /* 分隔線 */
+      .next-below{
         width: 1201px;
         height: 0px;
+        left: 360px;
         border: 1px dashed #d5d5d5;
         opacity: 1;
         position: absolute;
+      }
+      .next-below1 {
+        top: 1118px;
       }
       .next-below2 {
         top: 1958px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #d5d5d5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below3 {
         top: 2466px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #d5d5d5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below4 {
         top: 2974px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #d5d5d5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below5 {
         top: 3779px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below6 {
         top: 4510px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below7 {
         top: 5184px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below8 {
         top: 5687px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below9 {
         top: 6411px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below10 {
         top: 6913px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
       .next-below11 {
         top: 7545px;
-        left: 360px;
-        width: 1201px;
-        height: 0px;
-        border: 1px dashed #D5D5D5;
-        opacity: 1;
-        position: absolute;
       }
-      .next-below12 {
-       
-        position: absolute;
-      }
-      .footer{
+      
+      footer{
         top: 8334px;
-        left: 1px;
-        width: 1920px;
+        width: 100%;
         height: 87px;
         background: transparent linear-gradient(90deg, #00829B 0%, #009583 100%) 0% 0% no-repeat padding-box;
         opacity: 1;
         position: absolute;
       }
-      .footer-title{
-        top: 8356px;
-        left: 879px;
-        width: 165px;
-        height: 20px;
+      .footer{
         font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 20px/25px var(--unnamed-font-family-heiti-tc);
         letter-spacing: var(--unnamed-character-spacing-0);
         text-align: left;
@@ -911,141 +568,141 @@
         color: #FFFFFD;
         opacity: 1;
         position: absolute;
+        height: 20px;
+      }
+      .footer-title{
+        top: 8356px;
+        left: 879px;
+        width: 165px;
+        
       }
       .footer-title2{
         top: 8388px;
         left: 720px;
         width: 567px;
-        height: 20px;
-        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 20px/25px var(--unnamed-font-family-heiti-tc);
-        letter-spacing: var(--unnamed-character-spacing-0);
-        text-align: left;
-        font: normal normal medium 20px/25px Heiti TC;
-        letter-spacing: 0px;
-        color: #FFFFFD;
-        opacity: 1;
-        position: absolute;
+        
       }
+
+      
     </style>
    
   </head>
   <body>
-    <div class="bg">
-      <div class="navbar-area">
+    <main class="bg">
+      <header class="navbar-area">
         <div class="nav-top-area"></div>
         <div class="fb-logo"></div>
         <div class="home-logo"></div>
         <div class="navbar-text">回首頁</div>
-      </div>
+      </header>
 
       <div class="step-area"></div>
       <div class="title-tag"></div>
       <div class="title">變更流程</div>
       <!-- 步驟1 -->
-      <div class="step1-icon"></div>
-      <div class="step1">步驟1：</div>
-      <div class="step1-text">
+      <div class="step1-icon step-icon"></div>
+      <div class="step1 step">步驟1：</div>
+      <div class="step1-text step-text">
         由【富邦人壽官網】，點選『保戶會員專區』登入。
       </div>
-      <div class="step1-img"></div>
-      <div class="step1-img-2"></div>
-      <div class="next-below"></div>
+      <div class="step1-img-1 step-img"></div>
+      <div class="step1-img-2 step-img"></div>
+      <div class="next-below1 next-below"></div>
       <!-- 步驟2 -->
-      <div class="step2-icon"></div>
-      <div class="step2">步驟2：</div>
-      <div class="step2-text">
+      <div class="step2-icon step-icon"></div>
+      <div class="step2 step">步驟2：</div>
+      <div class="step2-text step-text">
         點選『線上交易』<br />★保戶需先申請成為交易會員方可於<br />網路
         辦理變更。。
       </div>
-      <div class="step2-img"></div>
-      <div class="next-below2"></div>
+      <div class="step2-img step-img"></div>
+      <div class="next-below2 next-below"></div>
       <!-- 步驟3 -->
-      <div class="step3-icon"></div>
-      <div class="step3">步驟3：</div>
-      <div class="step3-text">
+      <div class="step3-icon step-icon"></div>
+      <div class="step3 step">步驟3：</div>
+      <div class="step3-text step-text">
         點選後進入『多張保單地址/電話/<br />E-mail變更』作業。
       </div>
-      <div class="step3-img"></div>
-      <div class="next-below3"></div>
+      <div class="step3-img step-img"></div>
+      <div class="next-below3 next-below"></div>
       <!-- 步驟4 -->
-      <div class="step4-icon"></div>
-      <div class="step4">步驟4：</div>
-      <div class="step4-text">
-        確認顯示的行動電話及電子信箱是否為最新資料，若需修改請點選<img src="./images/editpen_icon.svg" style="width: 18px;height: 18px;"></img>修改。
+      <div class="step4-icon step-icon"></div>
+      <div class="step4 step">步驟4：</div>
+      <div class="step4-text step-text">
+        確認顯示的行動電話及電子信箱是否為最新資料，若需修改請點選<img src="./images/editpen_icon.svg" alt="edit" style="width: 18px;height: 18px;"></img>修改。
       </div>
-      <div class="step4-img"></div>
-      <div class="next-below4"></div>
+      <div class="step4-img step-img"></div>
+      <div class="next-below4 next-below"></div>
       <!-- 步驟5 -->
-      <div class="step5-icon"></div>
-      <div class="step5">步驟5：</div>
-      <div class="step5-text">
-        請點選<img src="./images/editpen_icon.svg" style="width: 18px;height: 18px;"></img>即可輸入欲變更之內容。
+      <div class="step5-icon step-icon"></div>
+      <div class="step5 step">步驟5：</div>
+      <div class="step5-text step-text">
+        請點選<img src="./images/editpen_icon.svg" alt="edit" style="width: 18px;height: 18px;"></img>即可輸入欲變更之內容。
       </div>
-      <div class="step5-img"></div>
-      <div class="next-below5"></div>
+      <div class="step5-img step-img"></div>
+      <div class="next-below5 next-below"></div>
       <!-- 步驟6 -->
-      <div class="step6-icon"></div>
-      <div class="step6">步驟6：</div>
+      <div class="step6-icon step-icon"></div>
+      <div class="step6 step">步驟6：</div>
       <div class="step6-1-icon"></div>
       <div class="step6-2-icon"></div>
       <div class="step6-3-icon"></div>
-      <div class="step6-text">
-        <span class="mr-3 text-white">1</span>確認變更內容 <br><span class="mr-3 text-white">2</span>點選<img src="images/delete_btn.svg" style="width: 20px;height: 20px;">，即可刪除此項目<br><span class="mr-3 text-white" >3</span>點選<img src="./images/edit_btn.svg" style="width: 20px;height: 20px;">，可回此變更項目輸入修改變更內容
+      <div class="step6-text step-text">
+        <span class="mr-3 text-white">1</span>確認變更內容 <br><span class="mr-3 text-white">2</span>點選<img src="images/delete_btn.svg" alt="delete" style="width: 20px;height: 20px;">，即可刪除此項目<br><span class="mr-3 text-white" >3</span>點選<img src="./images/edit_btn.svg" style="width: 20px;height: 20px;">，可回此變更項目輸入修改變更內容
       </div>
-      <div class="step6-img"></div>
-      <div class="next-below6"></div>
+      <div class="step6-img step-img"></div>
+      <div class="next-below6 next-below"></div>
       <!-- 步驟7 -->
-      <div class="step7-icon"></div>
-      <div class="step7">步驟7：</div>
-      <div class="step7-text">
+      <div class="step7-icon step-icon"></div>
+      <div class="step7 step">步驟7：</div>
+      <div class="step7-text step-text">
         請審閱重要提醒，確認無誤後請勾選 □我已了解並同意後，點選確認進入下一步。
       </div>
-      <div class="step7-img"></div>
-      <div class="next-below7"></div>
+      <div class="step7-img step-img"></div>
+      <div class="next-below7 next-below"></div>
       <!-- 步驟8 -->
-      <div class="step8-icon"></div>
-      <div class="step8">步驟8：</div>
-      <div class="step8-text">
+      <div class="step8-icon step-icon"></div>
+      <div class="step8 step">步驟8：</div>
+      <div class="step8-text step-text">
         請確認本次辦理變更資料，是否傳送至其他保險公司申辦相同變更項目。
       </div>
-      <div class="step8-img"></div>
-      <div class="next-below8"></div>
+      <div class="step8-img step-img"></div>
+      <div class="next-below8 next-below"></div>
       <!-- 步驟9 -->
-      <div class="step9-icon"></div>
-      <div class="step9">步驟9：</div>
-      <div class="step9-text">
+      <div class="step9-icon step-icon"></div>
+      <div class="step9 step">步驟9：</div>
+      <div class="step9-text step-text">
         如同意傳送至其他保險公司，請選擇 欲傳送之保險公司(可複選)。<br> ★僅提供有加入試辦之保險公司，請勾選有該公司保單之保險公司。
       </div>
-      <div class="step9-img"></div>
-      <div class="next-below9"></div>
+      <div class="step9-img step-img"></div>
+      <div class="next-below9 next-below "></div>
       <!-- 步驟10 -->
-      <div class="step10-icon"></div>
-      <div class="step10">步驟10：</div>
-      <div class="step10-text">
+      <div class="step10-icon step-icon"></div>
+      <div class="step10 step">步驟10：</div>
+      <div class="step10-text step-text">
         請審閱保全申請轉送暨個人資料告知事項，審閱完成後，請點選□本人已 審閱蒐集、處理及利用個人資料告知事項，如取消轉送，請點選『不同意 傳送』，可回至確認是否同意轉送頁重新選擇。
       </div>
-      <div class="step10-img"></div>
-      <div class="next-below10"></div>
+      <div class="step10-img step-img"></div>
+      <div class="next-below10 next-below"></div>
       <!-- 步驟11 -->
-      <div class="step11-icon"></div>
-      <div class="step11">步驟11：</div>
-      <div class="step11-text">
+      <div class="step11-icon step-icon"></div>
+      <div class="step11 step">步驟11：</div>
+      <div class="step11-text step-text">
         輸入動態密碼，未收到動態密碼，可點選重新發送動態密碼。
       </div>
-      <div class="step11-img"></div>
-      <div class="next-below11"></div>
+      <div class="step11-img step-img"></div>
+      <div class="next-below11 next-below"></div>
       <!-- 步驟12 -->
-      <div class="step12-icon"></div>
-      <div class="step12">步驟12：</div>
-      <div class="step12-text">
+      <div class="step12-icon step-icon"></div>
+      <div class="step12 step">步驟12：</div>
+      <div class="step12-text step-text">
         委託受理完成。可點選『列印內容』，產出加密之PDF檔，密碼為要保人身分證字號，第一個英文字母大寫。
       </div>
-      <div class="step12-img"></div>
-      <div class="next-below12"></div>
-      <div class="footer"></div>
-      <div class="footer-title">版權所有 富邦人壽</div>
-      <div class="footer-title2">最佳瀏覽狀態請使用：Chrome77, Safari 13, Firefox69版本以上</div>
-    </div>
+      <div class="step12-img step-img"></div>
+      <footer></footer>
+      <div class="footer-title footer">版權所有 富邦人壽</div>
+      <div class="footer-title2 footer">最佳瀏覽狀態請使用：Chrome77, Safari 13, Firefox69版本以上</div>
+    </main>
     <button onclick="topFunction()" id="myBtn" title="Go to top">GO TOP</button>
    
 
